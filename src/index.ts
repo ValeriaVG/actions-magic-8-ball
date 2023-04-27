@@ -24,6 +24,7 @@ const run = async () => {
     context.payload.comment["user"].login +
     " " +
     generateEightBallResponse();
+    
   await octokit.rest.issues.createComment({
     ...context.repo,
     issue_number,
