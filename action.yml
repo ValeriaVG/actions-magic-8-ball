@@ -1,0 +1,17 @@
+name: 'Magic Eight Ball'
+branding:
+  icon: 'message-circle'
+  color: 'gray-dark'
+description: 'Replies to a comment with a prediction'
+inputs:
+  prefix:
+    description: 'Prefix that would trigger the response'
+    default: '🎱'
+    required: false
+  GITHUB_TOKEN:
+    description: 'Github token of the repository (automatically created by Github)'
+    default: ${{ github.token }}
+    required: false
+runs:
+  using: 'node16'
+  main: 'lib/index.js'

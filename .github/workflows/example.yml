@@ -1,0 +1,16 @@
+on:
+  issue_comment:
+    types: [created]
+jobs:
+  test_8ball:
+    name: Magic Eight Ball
+    runs-on: ubuntu-latest
+    permissions:
+      pull-requests: write
+      issues: write
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v3
+      - name: Comment with message
+        uses: ./

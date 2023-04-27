@@ -1,0 +1,37 @@
+{
+  "name": "actions-8-ball",
+  "version": "1.0.0",
+  "description": "GitHub action for generating 8-ball answers on comments",
+  "main": "index.js",
+  "scripts": {
+    "dev":"ts-node src",
+    "build": "esbuild src/index.ts --bundle --platform=node --target=node16 --outfile=lib/index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ValeriaVG/actions-magic-8-ball.git"
+  },
+  "keywords": [
+    "actions",
+    "github",
+    "magic 8 ball"
+  ],
+  "author": "ValeriaVG <mail@valeriavg.dev>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/en-di/actions-8-ball/issues"
+  },
+  "homepage": "https://github.com/en-di/actions-8-ball#readme",
+  "devDependencies": {
+    "@tsconfig/node19": "^2.0.0",
+    "@types/node": "^18.16.1",
+    "esbuild": "^0.17.18",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.0.4"
+  },
+  "dependencies": {
+    "@actions/core": "^1.10.0",
+    "@actions/github": "^5.1.1"
+  }
+}
