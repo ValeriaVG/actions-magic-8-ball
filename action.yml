@@ -13,5 +13,5 @@ inputs:
     default: ${{ github.token }}
     required: false
 runs:
-  using: 'node18'
+  using: 'node16'
   main: 'lib/index.js'

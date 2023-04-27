@@ -57,8 +57,8 @@ const responses = [
 
 export default function generateEightBallResponse() {
   const randomSize = crypto.randomBytes(1)[0];
-  const randomValues = new Uint32Array(randomSize);
-  crypto.getRandomValues(randomValues);
-  const randomIndex = randomValues[Math.floor(Math.random() * randomSize)] % responses.length;
+  const randomValues = crypto.randomBytes(randomSize);
+  const randomIndex =
+    randomValues[Math.floor(Math.random() * randomSize)] % responses.length;
   return responses[randomIndex];
 }
